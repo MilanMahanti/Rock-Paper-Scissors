@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Rock-Paper-Scissor</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="score-container">
+        <div class="score__text">
+          <p>
+            Rock <br />
+            Paper <br />
+            Scissor
+          </p>
+        </div>
+        <div class="score score__computer">
+          <p>
+            computer <br />
+            score
+          </p>
+          <span id="computer-score">0</span>
+        </div>
+        <div class="score score__user">
+          <p>
+            user <br />
+            score
+          </p>
+          <span id="user-score">0</span>
+        </div>
+      </div>
+
+      <div class="game-container">
+        <div class="line"></div>
+        <div class="choices">
+          <div class="choice rock rock-border" data-choice="rock" id="choice">
+            <img src="images/rock.png" alt="rock" />
+          </div>
+          <div
+            class="choice paper paper-border"
+            data-choice="paper"
+            id="choice"
+          >
+            <img src="images/paper.png" alt="paper" />
+          </div>
+          <div
+            class="choice scissor scissor-border"
+            data-choice="scissor"
+            id="choice"
+          >
+            <img src="images/scissor.png" alt="scissor" style="width: 4rem" />
+          </div>
+        </div>
+      </div>
+
+      <div class="result-container hidden">
+        <div class="user-box">
+          <div class="user-box">
+            <div class="user-box">
+              <div class="user__picked">
+                <h3 class="pick">user Picked</h3>
+                <div class="choice user-result">
+                  <!-- <img src="images/rock.svg" alt="rock" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="result__text">
+          <p class="result__text-1">You won</p>
+          <p class="result__text-2">AGAINST PC</p>
+          <button class="btn btn-filled result__btn-1" id="play-again">
+            play again
+          </button>
+          <button class="btn btn-filled result__btn-2 hidden" id="replay">
+            replay
+          </button>
+        </div>
+
+        <div class="computer-box">
+          <div class="computer-box">
+            <div class="computer-box">
+              <div class="computer__picked">
+                <h3 class="pick">PC Picked</h3>
+                <div class="choice computer-result">
+                  <!-- <img src="images/rock.svg" alt="rock" /> -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="winner-container hidden">
+      <img src="images/Group 5Stars.png" alt="stars" class="stars" />
+      <img src="images/VectorTrophy.png" alt="trophy" class="trophy" />
+      <h1 class="winner-heading">Hurray!!</h1>
+      <h2 class="winner-subheading">You won the Game</h2>
+      <button class="btn btn-filled btn-large winning-btn">play again</button>
+    </section>
+
+    <div class="btn next-btn hidden">Next</div>
+    <div class="btn rules-btn">Rules</div>
+
+    <div class="rules-container hidden">
+      <button class="close-modal">X</button>
+      <h4 class="rules-heading">Game rules</h4>
+      <ul class="rules">
+        <li class="rule">
+          Rock beats scissors, scissors beat paper, and paper beats rock.
+        </li>
+        <li class="rule">
+          Agree ahead of time whether you’ll count off “rock, paper, scissors,
+          shoot” or just “rock, paper, scissors.”
+        </li>
+        <li class="rule">
+          Use rock, paper, scissors to settle minor decisions or simply play to
+          pass the time
+        </li>
+        <li class="rule">
+          If both players lay down the same hand, each player lays down another
+          hand
+        </li>
+      </ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
